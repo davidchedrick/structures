@@ -1,16 +1,16 @@
-function reverseString(str) {
-  // type your code here
-}
+const reverseString = str => str.split("").reverse().join("");
+
+reverseString("cat");
 
 if (require.main === module) {
-  // add your own tests in here
-  console.log("Expecting: 'ih'");
-  console.log("=>", reverseString("hi"));
+	// add your own tests in here
+	console.log("Expecting: 'ih'");
+	console.log("=>", reverseString("hi"));
 
-  console.log("");
+	console.log("");
 
-  console.log("Expecting: 'ybabtac'");
-  console.log("=>", reverseString("catbaby"));
+	console.log("Expecting: 'ybabtac'");
+	console.log("=>", reverseString("catbaby"));
 }
 
 module.exports = reverseString;
