@@ -1,23 +1,31 @@
 function recursiveCount(num = 0) {
-  if (num >= 10) {
-    return;
-  }
+	if (num >= 10) return;
+	console.log(num);
+	recursiveCount(++num);
+}
 
-  console.log(num);
-  recursiveCount(num + 1);
+recursiveCount();
 
-  // THIS IS ALSO A VALID OPTION INSTEAD OF THE ABOVE
-  // recursiveCount(++num);
+function recursiveCount(num = 0) {
+	if (num >= 10) {
+		return;
+	}
 
-  // THIS WILL CAUSE A STACK OVERFLOW. WHY?
-  // recursiveCount(num++);
+	console.log(num);
+	recursiveCount(num + 1);
 
-  // IF YOU LOG NUM BELOW, THE NUMBERS PRINT BACKWARDS FROM 9 TO 0. WHY?
-  // console.log(num);
+	// THIS IS ALSO A VALID OPTION INSTEAD OF THE ABOVE
+	// recursiveCount(++num);
+
+	// THIS WILL CAUSE A STACK OVERFLOW. WHY?
+	// recursiveCount(num++);
+
+	// IF YOU LOG NUM BELOW, THE NUMBERS PRINT BACKWARDS FROM 9 TO 0. WHY?
+	// console.log(num);
 }
 
 if (require.main === module) {
-  recursiveCount();
+	recursiveCount();
 }
 
 module.exports = recursiveCount;
