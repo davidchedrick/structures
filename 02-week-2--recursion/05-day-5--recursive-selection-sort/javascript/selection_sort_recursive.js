@@ -8,6 +8,7 @@ function selectionSortRecursive(arr) {
 	arr.splice(idx, 1);
 
 	const result = selectionSortRecursive(arr);
+
 	console.log(result);
 	result.unshift(min);
 	return result;
